@@ -1,0 +1,22 @@
+<service auto-start="true">
+    <name>user-services</name>
+    <public-id>com.athena.services:userlq-services</public-id>
+   <!--  <contract>com.cubeia.firebase.api.plugin.localhandler.LocalHandlerService</contract> -->
+    <contract>com.athena.services.api.ServiceContract</contract>
+    <contract>com.cubeia.firebase.api.login.LoginLocator</contract>
+    <contract>com.cubeia.firebase.api.login.PostLoginProcessor</contract>
+    <service>com.athena.services.impl.ServiceImpl</service>
+    <dependencies>
+        <dependency>
+            <groupId>mssqljdbc</groupId>
+            <artifactId>mssqljdbc</artifactId>
+            <version>4.0</version>
+            <scope>provider</scope>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+    <description />
+    <exported>
+        <package>com.athena.services.api.-</package>
+    </exported>
+</service>

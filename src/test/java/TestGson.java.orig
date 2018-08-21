@@ -1,0 +1,47 @@
+<<<<<<< HEAD
+import com.athena.database.ServerDefined;
+import com.athena.database.UserController;
+import com.athena.services.promotion.PromotionHandler;
+import com.athena.services.utils.ActionUtils;
+import com.vng.tfa.common.Config;
+
+public class TestGson {
+	public static void main(String[] args) {
+		processPromotionInviteFaceB();
+//		System.out.println(ActionUtils.CheckValidUsernameLQ("123@#$123"));
+	}
+
+	public static void initConfig(){
+//		Config.setP
+	}
+
+
+	public static void processPromotionInviteFaceB(){
+		PromotionHandler promotionHandler = new PromotionHandler(new UserController());
+		promotionHandler.processPromotionInviteFaceB(ServerDefined.MYANMAR_SOURCE, 100001124);
+
+	}
+=======
+import com.athena.services.impl.auth.AuthServiceImpl;
+import com.athena.services.impl.auth.AuthType;
+import com.athena.services.impl.auth.BasicUserAuth;
+
+public class TestGson {
+    public static void main(String[] args) {
+        testAuth();
+>>>>>>> add_2FA
+
+    }
+
+
+    private static void testAuth() {
+        try {
+            AuthServiceImpl authServiceImpl = new AuthServiceImpl();
+            authServiceImpl.requestAuth(new BasicUserAuth("haiduyyyyy", AuthType.NM, 1027));
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("err");
+        }
+    }
+}
